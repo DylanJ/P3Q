@@ -1,0 +1,21 @@
+# Output directories
+bin/
+obj/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# p3q files
+*.log
+*.swp
+src/tags
