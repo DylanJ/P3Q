@@ -12,10 +12,10 @@ vpath %.cpp src tests
 vpath %.h src tests
 
 MAINOBJS = $(addprefix $(OBJDIR)/, Main.o Bot.o)
-TESTOBJS = $(addprefix $(OBJDIR)/, Tests.o BotTest.o)
+TESTOBJS = $(addprefix $(OBJDIR)/, Tests.o BotTest.o ListTest.o )
 
-MAINHEADERS = $(Bot.h)
-TESTHEADERS = $($(MAINHEADERS) BotTest.h)
+MAINHEADERS = $(Bot.h List.h)
+TESTHEADERS = $($(MAINHEADERS) BotTest.h ListTest.h)
 
 all: bin test
 
@@ -28,7 +28,11 @@ test: $(TESTOBJS)
 obj/%.o: %.cpp
 	$(CC) $(CPPFLAGS) -c -g -Isrc/ -o $@ $<
 
-.PHONY: setup clean
+.PHONY: setup clean runtests
+
+runtests:
+	make tests
+	./bin/test
 
 setup:
 	mkdir bin

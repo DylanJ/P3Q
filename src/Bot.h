@@ -1,5 +1,7 @@
 #include <string>
 
+namespace p3q {
+
 class Bot {
     public:
         Bot( std::string name );
@@ -9,3 +11,5 @@ class Bot {
     private:
         std::string name;
 };
+
+}

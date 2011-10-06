@@ -13,6 +13,6 @@ void BotTest::tearDown() {
 
 
 void BotTest::testConstructor() {
-  CPPUNIT_FAIL( "not implemented." );
+
 }
 

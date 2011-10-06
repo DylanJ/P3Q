@@ -2,6 +2,8 @@
 #include <string>
 #include "Bot.h"
 
+namespace p3q {
+
 Bot::Bot( std::string name ) {
     this->name = name;
 }
@@ -14,3 +16,4 @@ std::string Bot::getName() {
     return this->name;
 }
 
+}
